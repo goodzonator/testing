@@ -1,3 +1,25 @@
 .header {
-
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 24px;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 2.44px;
+        margin-top: 2px;
+        margin-left: 2px;
+        font-size: 19px;
+        line-height: 1;
+        letter-spacing: .3px;
+        font-weight: 500;
+        color: #F2F2F2;
+    }
 }

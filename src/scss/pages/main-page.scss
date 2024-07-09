@@ -1,0 +1,24 @@
+.home {
+    padding: 141px 0 142px;
+    background: $bg-dark url("../images/bg/home-mobile-bg.png") no-repeat center bottom;
+    background-size: auto 677px !important;
+    &__inner {
+        padding: 56px 23px;
+        text-align: center;
+        color: $white;
+        background: linear-gradient(104.93deg, rgba(122, 122, 122, 0.19) 1.86%, rgba(122, 122, 122, 0) 104.73%);
+        backdrop-filter: blur(35px);
+        border-radius: 7px;
+        box-shadow: 0 4px 4px 0 rgba(50, 50, 50, 0.15);
+        p {
+            margin-top: 30px;
+            line-height: 20px;
+        }
+    }
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 40px;
+    }
+}

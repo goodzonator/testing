@@ -88,21 +88,12 @@ button {
 
 a {
     color: inherit;
-    text-decoration: underline;
-    text-underline-position: under;
+    text-decoration: none;
     transition: all .3s;
 
     &:focus,
     &:active {
         outline: none;
-    }
-
-    &:visited {
-        text-decoration: none;
-    }
-
-    &:hover {
-        text-decoration: none;
     }
 }
 
