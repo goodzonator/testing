@@ -22,6 +22,21 @@
     font-weight: 500;
 }
 
+@media (min-width: $tv) {
+    .h1 {
+        font-size: 44px;
+        line-height: 52px;
+    }
+    .h2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+    .h3 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+
 @media (min-width: $ds) {
     .h1 {
         margin-bottom: 40px;
@@ -32,5 +47,12 @@
         margin-bottom: 90px;
         font-size: 54px;
         line-height: 62px;
+    }
+}
+
+@media (max-width: 359px) {
+    .h1 {
+        margin-bottom: 20px;
+        font-size: 32px;
     }
 }

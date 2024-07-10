@@ -3,25 +3,27 @@ body:has(.popup-wrapper.active) {
 }
 
 .popup {
+    max-height: 100%;
     width: calc(100% - 40px);
     max-width: 480px;
-    position: absolute;
+    position: relative;
     z-index: 2;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
     padding: 10px;
     background: $white;
     border-radius: 10px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     overflow-y: auto;
     &-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         left: 0;
         top: 0;
         z-index: 9999;
         width: 100%;
         height: 100%;
+        padding: 20px 0 !important;
         visibility: hidden;
         opacity: 0;
         transition: all .3s;
@@ -128,19 +130,15 @@ body:has(.popup-wrapper.active) {
             border-color: $dark;
         }
     }
-    @media (min-width: $ds) {
-        width: 724px;
-        max-width: 100%;
+    @media (min-width: $tv) {
         padding: 20px;
-        overflow: visible;
         &__header {
-            flex-direction: row;
             gap: 20px;
         }
         &__img {
             flex-shrink: 0;
-            width: 271px;
-            height: 239px;
+            width: 200px;
+            height: 176px;
         }
         &__info {
             line-height: 23px;
@@ -150,6 +148,26 @@ body:has(.popup-wrapper.active) {
             span:first-child {
                 width: 102px;
             }
+        }
+        &__description {
+            line-height: 29px;
+        }
+    }
+    @media (min-width: $th) {
+        max-width: 560px;
+    }
+    @media (min-width: $ds) {
+        width: 724px;
+        max-width: 100%;
+        padding: 20px;
+        overflow: visible;
+        &__header {
+            flex-direction: row;
+        }
+        &__img {
+            flex-shrink: 0;
+            width: 271px;
+            height: 239px;
         }
         &__socials {
             ul {
@@ -161,12 +179,12 @@ body:has(.popup-wrapper.active) {
                 height: 30px;
             }
         }
-        &__description {
-            line-height: 29px;
-        }
         &__close {
             top: -12px;
             right: -12px;
         }
+    }
+    @media (max-width: 359px) {
+        width: calc(100% - 20px);
     }
 }

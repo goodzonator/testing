@@ -21,7 +21,7 @@ const outTeamSlider = document.querySelectorAll('.our-team-slider');
 
 let loop = true;
 let centeredSlides = true;
-if (window.innerWidth >= 1200) {
+if (window.innerWidth >= 768) {
     loop = false;
     centeredSlides = false;
 }

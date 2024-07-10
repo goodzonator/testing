@@ -257,11 +257,7 @@
     }
 }
 
-@media (min-width: $ds) {
-    .choices {
-        font-size: 20px;
-        line-height: 23px;
-    }
+@media (min-width: $tv) {
     .choices__inner {
         min-height: 64px;
     }
@@ -277,6 +273,13 @@
     }
     .choices__placeholder {
         letter-spacing: -.2px;
+    }
+}
+
+@media (min-width: $ds) {
+    .choices {
+        font-size: 20px;
+        line-height: 23px;
     }
     .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
         font-size: 20px;

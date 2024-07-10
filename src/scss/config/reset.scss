@@ -49,9 +49,13 @@ body {
     &:has(.mobile-menu-wrap.active) {
         overflow: hidden;
     }
-    @media (min-width: $ds) {
+    @media (min-width: $tv) {
         font-size: 20px;
         line-height: 29px;
+    }
+    @media (max-width: 359px) {
+        font-size: 14px;
+        line-height: 20px;
     }
 }
 
