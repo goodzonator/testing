@@ -1,0 +1,107 @@
+.footer {
+    padding: 50px 0;
+    color: $white;
+    background: $dark;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+    .h3 {
+        position: relative;
+        margin-bottom: 20px;
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 89px;
+            border-top: 2px solid $red;
+        }
+    }
+    &__contacts {
+        line-height: 18px;
+        li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        a, span {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        svg {
+            color: $red;
+            transition: all .3s;
+        }
+        a:hover svg {
+            color: $white;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        gap: 12px;
+        a {
+            color: $red;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    &__privacy-policy {
+        display: inline-block;
+        margin-top: 20px;
+        line-height: 18px;
+        color: #B1B1B1;
+        text-underline-position: under;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    @media (min-width: $ds) {
+        background: $bg-dark url("../images/bg/footer-dots-bg.png") no-repeat top 73px right 70px;
+        background-size: 147px 423px !important;
+        padding: 120px 0 132px;
+        font-weight: 400;
+        &__inner {
+            flex-direction: row;
+            gap: 268px;
+        }
+        .h3 {
+            margin-bottom: 30px;
+            font-size: 30px;
+            line-height: 34px;
+            font-weight: bold;
+            &:before {
+                width: 130px;
+            }
+        }
+        &__contacts {
+            font-size: 20px;
+            line-height: 23px;
+            li:not(:last-child) {
+                margin-bottom: 11px;
+            }
+            a, span {
+                gap: 15px;
+            }
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &__socials {
+            gap: 15px;
+            svg {
+                width: 34px;
+                height: 34px;
+            }
+        }
+        &__privacy-policy {
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+}

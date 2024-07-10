@@ -1,4 +1,7 @@
 .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 100%;
     width: 284px;
     height: 60px;
@@ -9,18 +12,31 @@
     background: $red;
     border: 1px solid $red;
     border-radius: 36px;
+    cursor: pointer;
+
     &:hover {
         background: #cb0c45;
         border-color: #cb0c45;
     }
+
+    @media (min-width: $ds) {
+        height: 64px;
+        font-size: 24px;
+        line-height: 28px;
+    }
 }
 
-.btn-white-transparent  {
+.btn-white-transparent {
     background: transparent;
     border-color: $white;
+
     &:hover {
         color: $dark;
         background: $white;
         border-color: $white;
     }
+}
+
+.btn-dark {
+    background: $dark;
 }

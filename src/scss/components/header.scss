@@ -4,12 +4,14 @@
     left: 0;
     top: 0;
     width: 100%;
+
     &__inner {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         padding-top: 24px;
     }
+
     &__logo {
         display: flex;
         align-items: center;
@@ -21,5 +23,49 @@
         letter-spacing: .3px;
         font-weight: 500;
         color: #F2F2F2;
+    }
+
+    @media (min-width: $ds) {
+        &__inner {
+            align-items: center;
+            padding-top: 30px;
+        }
+        &__logo {
+            margin-top: 0;
+            margin-left: 0;
+            gap: 4px;
+            font-size: 36px;
+            line-height: 41px;
+            &:hover {
+                opacity: .8;
+            }
+
+            img {
+                width: 64px;
+                height: 55px;
+            }
+        }
+        .main-menu {
+            margin-top: -5px;
+
+            ul {
+                display: flex;
+                gap: 30px;
+            }
+
+            a {
+                color: $white;
+                font-size: 16px;
+                line-height: 18px;
+                font-weight: 400;
+                letter-spacing: .05px;
+                text-transform: uppercase;
+                text-underline-position: under;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 }

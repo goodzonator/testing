@@ -1,0 +1,142 @@
+.form.success {
+    & > *:not(.form__message) {
+        display: none;
+    }
+    .form__message {
+        display: block;
+    }
+}
+
+.form__group:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.form__input, .form__textarea {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    line-height: 18px;
+    letter-spacing: -.1px;
+    background: $white;
+    border-radius: 7px;
+    box-shadow: 0 1px 4px 0 #00000026;
+    &::placeholder {
+        color: #585858;
+    }
+}
+
+.form__input {
+    height: 50px;
+}
+.form__input:has(+ .form__input-error:not(:empty)) {
+    box-shadow: 0 0 0 1px red;
+}
+
+.choices:has(+ .form__input-error:not(:empty)) .choices__inner {
+    box-shadow: 0 0 0 1px red;
+}
+
+.form__textarea {
+    height: 193px;
+}
+
+.form__input-error {
+    margin-top: 4px;
+    font-weight: 400;
+    color: red;
+    &:empty {
+        display: none;
+    }
+}
+
+.form__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.form__upload-cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    gap: 15px;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 400;
+    color: $dark;
+    border: 1px solid $dark;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all .3s;
+    &.error {
+        color: red;
+        border-color: red;
+    }
+    &:hover, &.loaded {
+        color: $white;
+        background: $dark;
+    }
+    input {
+        display: none;
+    }
+}
+
+.form__message {
+    display: none;
+    margin-bottom: 0;
+    padding: 150px 0;
+    text-align: center;
+    color: green;
+}
+
+@media (min-width: $ds) {
+    .form {
+        width: 880px;
+        max-width: 100%;
+    }
+    .form__group {
+        width: calc(50% - 10px);
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    .form__group:has(.form__textarea) {
+        width: 100%;
+    }
+    .form__input, .form__textarea {
+        padding: 21px;
+    }
+    .form__input {
+        height: 64px;
+    }
+    .form__textarea {
+        width: 100%;
+        height: 222px;
+        padding-top: 23px;
+    }
+    .form__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .form__footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    .form__upload-cv {
+        width: 284px;
+        height: 57px;
+    }
+    .form__message {
+        padding: 0;
+        text-align: left;
+        font-size: 30px;
+        line-height: 39px;
+    }
+}

@@ -13,11 +13,24 @@
 
 .h2 {
     font-size: 24px;
-    line-height: 27.58px;
+    line-height: 28px;
 }
 
 .h3 {
     font-size: 20px;
     line-height: 23px;
     font-weight: 500;
+}
+
+@media (min-width: $ds) {
+    .h1 {
+        margin-bottom: 40px;
+        font-size: 72px;
+        line-height: 83px;
+    }
+    .h2 {
+        margin-bottom: 90px;
+        font-size: 54px;
+        line-height: 62px;
+    }
 }
